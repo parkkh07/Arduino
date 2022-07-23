@@ -4,7 +4,7 @@ void setup() {
 }
 
 void loop() {
-  int isBtClicked = digitalRead(4)
+  int isBtClicked = digitalRead(4);
   Serial.println(isBtClicked);
   delay(10);
 }
