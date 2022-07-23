@@ -1,10 +1,14 @@
 void setup() {
   Serial.begin(9600);
   pinMode(4,INPUT_PULLUP);
+  pinMode(13, OUTPUT);
 }
 
 void loop() {
-  int isBtClicked = digitalRead(4);
-  Serial.println(isBtClicked);
-  delay(10);
+ 
+  if(digitalRead(4) == 0){
+    digitalWrite(13, HIGH);
+  }else{
+    digitalWrite(13,LOW);
+  }
 }
