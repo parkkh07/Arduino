@@ -20,7 +20,7 @@ void loop() {
   Serial.print("Temperature : ");
   Serial.println(t);
 
-  if(t >= 22){
+  if(t >= 21){
     digitalWrite(12,HIGH);
   }else{
     digitalWrite(12,LOW);
