@@ -8,6 +8,7 @@ DHT dht(DHTPIN,DHTTYPE);
 void setup() {
   dht.begin();
   Serial.begin(9600);
+  pinMode(12,OUTPUT);
 }
 
 void loop() {
@@ -19,8 +20,10 @@ void loop() {
   Serial.print("Temperature : ");
   Serial.println(t);
 
-  if(t >= 26){
-    Serial.print("Too hot");
+  if(t >= 22){
+    digitalWrite(12,HIGH);
+  }else{
+    digitalWrite(12,LOW);
   }
  
   delay(1000);
