@@ -19,6 +19,7 @@ void loop() {
   if (buttonState1 == HIGH){
     stepper.step(stepsPerRev);
     delay(1000);
+   
   }else if(buttonState2 == HIGH){
     stepper.step(-stepsPerRev);
     delay(1000);
