@@ -17,11 +17,11 @@ void loop() {
   buttonState2 = digitalRead(4);
 
   if (buttonState1 == HIGH){
-    stepper.step(stepsPerRev);
-    delay(1000);
+    stepper.step(1);
+  
    
   }else if(buttonState2 == HIGH){
-    stepper.step(-stepsPerRev);
-    delay(1000);
+    stepper.step(-1);
+   
   }
 }
